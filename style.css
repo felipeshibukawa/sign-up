@@ -15,6 +15,10 @@
     --transparent-black: rgba(0, 0, 0, 0.5);
 }
 
+html {
+    background-color: rgb(247, 247, 247);
+}
+
 p {
     margin: 1rem 0 1rem 0;
 }
@@ -28,8 +32,12 @@ main {
 
 #image-container {
     padding-top: 30%;
-    background-image: url(/img/annie-spratt-YGBaA4UdoLY-unsplash.jpg);
+    background-image: url(https://raw.githubusercontent.com/felipeshibukawa/sign-up/main/img/annie-spratt-YGBaA4UdoLY-unsplash.jpg);
     background-size: cover;
+}
+
+h1 {
+    font-size: min(6rem, 6vw);
 }
 
 .logo-container {
@@ -45,7 +53,7 @@ main {
 }
 
 img {
-    width: 8rem;
+    width: min(8rem, 10vw);
     padding-right: 1rem;
 }
 
@@ -53,15 +61,13 @@ img {
     background-color: rgb(247, 247, 247);
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
     /* padding-left: 3rem; */
     font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
-    margin: 0 auto;
 }
 
 .text {
-    margin-left: 3rem;
+    padding: 0 3rem 0 3rem;
     font-size: x-large;
     font-weight: 600;
 }
@@ -79,9 +85,8 @@ img {
     font-weight: 550;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 6px;
     background-color: rgb(255, 255, 255);
-    padding-left: 3rem;
+    padding: 0 3rem 0 3rem;
 }
-
 
 .form-container > p {
     font-size: 1.8rem;
@@ -103,7 +108,7 @@ label {
 }
 
 input {
-    width: 16rem;
+    width: min(16rem, 22vw);
     height: 1.5rem;
     /* background-color: var(--davys-gray); */
     border: 1px solid var(--french-gray);
@@ -144,4 +149,69 @@ input:invalid + span::after {
 @font-face {
     font-family: 'Modeska-Bold';
     src: url('font/modeska-trial-bold.ttf') format('truetype');
+}
+
+@media only screen and (min-width: 1600px) {
+    main {
+        grid-template-columns: 60% auto;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    :root {
+        font-size: 12px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .text > p {
+        font-size: 12px;
+        width: calc(100vw - 2rem);
+    }
+
+    .remote {
+        padding: 1rem 0 1rem 0;
+    }
+
+    .text {
+        padding: 0 1rem 0 1rem;
+        font-size: medium;
+        font-weight: 600;
+    }
+
+    #image-container {
+        display: none;
+    }
+
+    input {
+        width: max(8rem, 40vw);
+    }
+
+    .form-container {
+        height: 22rem;
+        font-size: 1rem;
+        font-weight: 550;
+        padding: 0 1rem 0 1rem;
+    }
+    
+    .form-container > p {
+        font-size: 1.8rem;
+        margin: 1.5rem 0 1.5rem;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button, .log-in {
+        margin: 2rem 0 0 0;
+    }
 }
