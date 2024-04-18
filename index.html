@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div id="image-container">
+            <div class="logo-container">
+                <img src="img/sakura-Konkapp-Flaticon-white.png" alt="Sakura Logo">
+                <h1>SAKURA</h1>
+            </div>
+        </div>
+        <div id="content">
+            <div class="text">
+                <p>This is not a real online service! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Sign up <em>now</em> to get started.</p>
+                <p class="remote">You <em>know</em> you want to.</p>
+            </div>
+            <form action method class="form-container">
+                <p class="form-text">Let's do this!</p>
+                <div class="input-container">
+                    <label for="first-name">FIRST NAME</label>
+                    <input type="text" id="first-name" name="first-name" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ]{1,20}$">
+                <span></span>
+                </div>
+                <div class="input-container">
+                    <label for="last-name">LAST NAME</label>
+                    <input type="text" id="last-name" name="last-name"  pattern="^[A-Za-zÀ-ÖØ-öø-ÿ]{1,20}$">
+                <span></span>
+                </div>
+                <div class="input-container">
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" name="email">
+                    <span></span>
+                </div>
+                <div class="input-container">
+                    <label for="phone">PHONE</label>
+                    <input type="tel" id="phone" name="phone" maxlength="15" pattern="^\d{12,15}$">
+                    <span></span>
+                </div>
+                <div class="input-container">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" id="password" name="password" minlength="8">
+                <span></span>
+                </div>
+                <div class="input-container">
+                    <label for="confirm-password">CONFIRM PASSWORD</label>
+                    <input type="password" id="confirm-password" name="confirm-password">
+                <span></span>
+                </div>
+            </form>
+            <button type="submit">Create Account</button>
+            <p class="log-in">Already have an account? <a href="/">Log in</a></p>
+        </div>
+    </main>
+</body>
+</html>
